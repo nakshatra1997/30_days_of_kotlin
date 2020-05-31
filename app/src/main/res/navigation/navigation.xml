@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/gameStart">
+
+    <fragment
+        android:id="@+id/gameStart"
+        android:name="com.prime.shuffler.GameStart"
+        android:label="fragment_game_start"
+        tools:layout="@layout/fragment_game_start" >
+        <action
+            android:id="@+id/action_gameStart_to_titlePageFragment"
+            app:destination="@id/titlePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/titlePageFragment"
+        android:name="com.prime.shuffler.TitlePageFragment"
+        android:label="fragment_title_page"
+        tools:layout="@layout/fragment_title_page" >
+        <action
+            android:id="@+id/action_titlePageFragment_to_gameFinished"
+            app:destination="@id/gameFinished" />
+        <action
+            android:id="@+id/action_titlePageFragment_to_gameStart"
+            app:destination="@id/gameStart" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFinished"
+        android:name="com.prime.shuffler.GameFinished"
+        android:label="fragment_game_finished"
+        tools:layout="@layout/fragment_game_finished" >
+        <action
+            android:id="@+id/action_gameFinished_to_titlePageFragment"
+            app:destination="@id/titlePageFragment" />
+    </fragment>
+</navigation>
