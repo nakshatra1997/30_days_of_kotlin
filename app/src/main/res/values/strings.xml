@@ -9,6 +9,18 @@
     find out the correct word. Each correct answer will reward you 1 point and wrong answer will
     cost you 1 point. So are you ready ??</string>
     <string name="start_game">Start Game</string>
-    <string name="about">About Game</string>
+    <string name="about">About This App</string>
     <string name="hint">Enter your answer</string>
+    <string name="question">Word Number : %1$d</string>
+    <string name="intro">The Shuffler Game</string>
+    <string name="game_over">Game Over</string>
+    <string name="about_kotlin">This shuffler game is a part of 30 days kotlin challenge by Google. This app
+    has implemented following concepts of kotlin:
+    1) Layout concepts
+    2) Data Binding concepts
+    3) Fragments
+    4) Navigation UI
+    This app is the result of curiosity to explore kotlin and in future more features will be added like hint
+    for answers, the words that are hardcoded will be fetched from online dictionary which can give
+    other relevant details of the word like its meaning and how to use that word</string>
 </resources>

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.prime.shuffler.databinding.FragmentTitlePageBinding
@@ -71,6 +72,8 @@ private val questions:MutableList<Question> =
 
         }
 
+
+
         return binding.root
     }
     // randomize the questions and set the first question
@@ -84,6 +87,9 @@ private val questions:MutableList<Question> =
         binding.shuffledWord.text=currentQuestion.shuffled
         binding.answerWord.text.clear()
         binding.answerWord.hint="Enter your answer"
+        //for setting the title on action bar
+        (activity as AppCompatActivity).supportActionBar?.title=getString(R.string.question,count_questions+1)
+
 
     }
 }

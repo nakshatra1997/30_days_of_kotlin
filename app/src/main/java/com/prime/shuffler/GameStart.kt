@@ -11,7 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.prime.shuffler.databinding.FragmentGameStartBinding
 import android.widget.Toast
-
+import androidx.appcompat.app.AppCompatActivity
 
 
 /**
@@ -33,6 +33,8 @@ class GameStart : Fragment() {
             //on clicking the button,user should navigate to other fragment
            view.findNavController().navigate(R.id.action_gameStart_to_titlePageFragment)
        }
+        (activity as AppCompatActivity).supportActionBar?.title =
+            getString(R.string.intro)
 
         return binding.root
     }
