@@ -10,4 +10,5 @@
     cost you 1 point. So are you ready ??</string>
     <string name="start_game">Start Game</string>
     <string name="about">About Game</string>
+    <string name="hint">Enter your answer</string>
 </resources>

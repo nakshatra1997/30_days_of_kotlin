@@ -21,7 +21,9 @@
         tools:layout="@layout/fragment_title_page" >
         <action
             android:id="@+id/action_titlePageFragment_to_gameFinished"
-            app:destination="@id/gameFinished" />
+            app:destination="@id/gameFinished"
+            app:popUpTo="@+id/titlePageFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_titlePageFragment_to_gameStart"
             app:destination="@id/gameStart" />

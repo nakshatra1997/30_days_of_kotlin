@@ -15,11 +15,15 @@ class MainActivity : AppCompatActivity() {
 //        setContentView(R.layout.activity_main)
         // Concept of binding has been used thats why upper statement has been removed
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        // this is for the arrow button up in the action bar
         var navController=this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this,navController)
         NavigationUI.setupWithNavController(binding.navView,navController)
 
-
-
+    }
+    //for upper navigation
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController(R.id.myNavHostFragment)
+        return navController.navigateUp()
     }
 }
