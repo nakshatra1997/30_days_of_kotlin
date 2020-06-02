@@ -1,6 +1,5 @@
 package com.prime.shuffler
 
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -63,7 +62,9 @@ private val questions:MutableList<Question> =
                 //navigate to game finished
                 Toast.makeText(context,"GAME IS FINISHED!!!! YOUR SCORE IS"+score,
                     Toast.LENGTH_SHORT).show()
-                view.findNavController().navigate(R.id.action_titlePageFragment_to_gameFinished)
+
+                view.findNavController().navigate(TitlePageFragmentDirections
+                    .actionTitlePageFragmentToGameFinished(score))
             }else{
                 setQuestion()
 

@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_gameFinished_to_titlePageFragment"
             app:destination="@id/titlePageFragment" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/startGame"

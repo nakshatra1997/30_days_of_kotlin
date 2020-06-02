@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <LinearLayout
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/game_finished_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="235dp"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/hello_blank_fragment"
+        android:textSize="20sp"
         tools:layout_editor_absoluteX="79dp"
         tools:layout_editor_absoluteY="151dp" />
 

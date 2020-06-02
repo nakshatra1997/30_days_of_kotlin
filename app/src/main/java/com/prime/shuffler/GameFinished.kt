@@ -28,6 +28,7 @@ class GameFinished : Fragment() {
             view.findNavController().navigate(R.id.action_gameFinished_to_titlePageFragment)
         }
         (activity as AppCompatActivity).supportActionBar?.title=getString(R.string.game_over)
+        binding.score.text="Your Score is : "+GameFinishedArgs.fromBundle(arguments!!).score.toString()
         return binding.root
     }
 
