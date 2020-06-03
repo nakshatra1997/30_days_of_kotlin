@@ -28,7 +28,21 @@ class GameFinished : Fragment() {
             view.findNavController().navigate(R.id.action_gameFinished_to_titlePageFragment)
         }
         (activity as AppCompatActivity).supportActionBar?.title=getString(R.string.game_over)
-        binding.score.text="Your Score is : "+GameFinishedArgs.fromBundle(arguments!!).score.toString()
+        var score=GameFinishedArgs.fromBundle(arguments!!).score
+        var numq=GameFinishedArgs.fromBundle(arguments!!).numQ
+        var wrong=GameFinishedArgs.fromBundle(arguments!!).wrong
+        binding.score.text="" +
+                "Your Score is : "+score.toString()
+
+        if(wrong==0){
+            binding.scoreContent.text="You answered all "+numq+" words correctly"
+        }else{
+            if(numq-wrong==1)
+            binding.scoreContent.text="You answered "+(numq-wrong)+" word correctly"
+            binding.scoreContent.text="You answered "+(numq-wrong)+" words correctly"
+
+        }
+
         return binding.root
     }
 

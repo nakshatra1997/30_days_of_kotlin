@@ -25,13 +25,27 @@ data class Question(
 private val questions:MutableList<Question> =
     mutableListOf(Question(shuffled="anchge",unshuffled="change"),
         Question(shuffled="bainrow",unshuffled = "rainbow"),
-        Question(shuffled = "riget",unshuffled = "tiger"))
+        Question(shuffled = "tibealufu",unshuffled = "beautiful"),
+        Question(shuffled = "bleraud",unshuffled = "durable"),
+        Question(shuffled = "riget",unshuffled = "tiger"),
+        Question(shuffled = "geplun",unshuffled = "plunge"),
+        Question(shuffled = "enpott",unshuffled = "potent"),
+        Question(shuffled = "aintw",unshuffled = "twain"),
+        Question(shuffled = "mensireg",unshuffled = "regimens"),
+        Question(shuffled = "gescruo",unshuffled = "scourge"),
+        Question(shuffled = "tnceie",unshuffled = "entice"),
+        Question(shuffled = "latabnt",unshuffled = "blatant"),
+        Question(shuffled = "eaklb",unshuffled = "bleak"),
+        Question(shuffled = "diina",unshuffled = "india"),
+        Question(shuffled = "liknot",unshuffled = "kotlin"))
 
 
     lateinit var currentQuestion: Question
+    private val numQuestions = Math.min((questions.size + 1) / 2, 3)
     private var questionIndex = 0
     private var score=0
     private var count_questions=0
+    private var wrong=0
     private lateinit var binding: FragmentTitlePageBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,14 +71,15 @@ private val questions:MutableList<Question> =
             }else{
                 Toast.makeText(context,"Your answer was wrong..!!!!",Toast.LENGTH_SHORT).show()
                 score-=1
+                wrong+=1
             }
-            if(count_questions==questions.size){
+            if(count_questions==numQuestions){
                 //navigate to game finished
-                Toast.makeText(context,"GAME IS FINISHED!!!! YOUR SCORE IS"+score,
-                    Toast.LENGTH_SHORT).show()
+//                Toast.makeText(context,"GAME IS FINISHED!!!! YOUR SCORE IS "+score,
+//                    Toast.LENGTH_SHORT).show()
 
                 view.findNavController().navigate(TitlePageFragmentDirections
-                    .actionTitlePageFragmentToGameFinished(score))
+                    .actionTitlePageFragmentToGameFinished(score,numQuestions,wrong))
             }else{
                 setQuestion()
 
